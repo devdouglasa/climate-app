@@ -4,11 +4,9 @@ Aplicativo de previsão do tempo utilizando a [Weather Forecast API](https://ope
 
 ## Tecnologias
 
-<br>
-
 <img width=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" /> &nbsp;&nbsp;&nbsp;&nbsp; <img width=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
 
-<br>
+
 
 ## Get Started
 
@@ -28,6 +26,11 @@ Rode o app:
 ```
 flutter run
 ```
+
+
+## Imagens
+
+<img width=200 src="./img/project1.png" />
 
 <br>
 
