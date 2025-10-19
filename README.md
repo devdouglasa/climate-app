@@ -1,16 +1,35 @@
-# climate_app
+# Climate App
 
-A new Flutter project.
+Aplicativo de previsão do tempo utilizando a [Weather Forecast API](https://open-meteo.com/).
 
-## Getting Started
+## Tecnologias
 
-This project is a starting point for a Flutter application.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+<img width=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" /> &nbsp;&nbsp;&nbsp;&nbsp; <img width=40 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Get Started
+
+No seu teminal [cmd ou bash]:
+
+Crie um clone do repositório:
+```
+git clone https://github.com/devdouglasa/climate-app.git
+```
+
+Entre na pasta do projeto:
+```
+cd climate-app
+```
+
+Rode o app:
+```
+flutter run
+```
+
+<br>
+
+#
+### Desenvolvido por devdouglasa
