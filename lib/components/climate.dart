@@ -18,7 +18,13 @@ class Climate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(street),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.location_on_outlined, color: Colors.red),
+            Text(street),
+          ],
+        ),
         Text(
           '$temperature°C',
           style: TextStyle(fontSize: 65, fontWeight: FontWeight.w300),
