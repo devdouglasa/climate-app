@@ -6,9 +6,7 @@ import 'package:climate_app/services/weather_api.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  final weather = WeatherApi();
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +27,6 @@ class HomePage extends StatelessWidget {
           }
 
           final data = snapshot.data!;
-          print(data['climate']);
           final double currentTemp =
               data['climate']['current_weather']['temperature'];
           final DateTime updatedAtData = DateTime.parse(
