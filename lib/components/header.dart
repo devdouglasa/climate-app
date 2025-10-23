@@ -15,7 +15,6 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     String formatUpdatedAt() {
       final updatedAtFormated = DateFormat(
         'dd/MM/yyyy HH:mm',
