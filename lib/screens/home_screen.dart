@@ -2,11 +2,10 @@ import 'package:climate_app/components/card_prevision.dart';
 import 'package:climate_app/components/climate.dart';
 import 'package:climate_app/components/header.dart';
 import 'package:climate_app/services/climate_location.dart';
-import 'package:climate_app/services/weather_api.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
