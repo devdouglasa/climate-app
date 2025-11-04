@@ -9,7 +9,7 @@ class WeatherApi {
     "current_weather": "true",
     "hourly": "temperature_2m,precipitation_probability",
     "daily": "temperature_2m_min,temperature_2m_max",
-    "forecast_hours": "4",
+    "forecast_hours": "8",
   };
 
   Future<Map<String, dynamic>> getClimate(double latitude, double longitude) async {
