@@ -19,16 +19,17 @@ class CardPrevision extends StatelessWidget {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(71, 255, 255, 255),
+            padding: EdgeInsets.zero,
+            backgroundColor: const Color.fromARGB(61, 255, 255, 255),
             shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(50),
             ),
-            fixedSize: Size.fromHeight(85),
+            fixedSize: Size(85, 125),
           ),
           onPressed: () {},
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 6,
+            spacing: 10,
             children: [
               Icon(
                 time.hour >= 18 ? Icons.nightlight_round : Icons.sunny,
@@ -36,7 +37,7 @@ class CardPrevision extends StatelessWidget {
                 size: 25,
               ),
               Column(
-                spacing: 3,
+                spacing: 5,
                 children: [
                   Text(
                     '$temperature°C',
