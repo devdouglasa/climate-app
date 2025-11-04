@@ -50,7 +50,9 @@ class HomeScreen extends StatelessWidget {
             cards.add(CardPrevision(temperature: tempConverted, time: time));
           }
 
-          final String cityData = data['location']['locality'];
+          final String cityData = data['location']['locality'] == ""
+              ? data['location']['subLocality']
+              : data['location']['locality'];
           final String stateData = data['location']['administrativeArea'];
           final String streetData = data['location']['street'];
 
@@ -60,35 +62,65 @@ class HomeScreen extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(255, 0, 24, 94),
-                  Color.fromARGB(255, 97, 0, 126),
-                  Color.fromARGB(255, 67, 0, 88),
+                  Color(0xFF0F2027),
+                  Color(0xFF203A43),
+                  Color(0xFF2C5364),
+                  // Color.fromARGB(255, 0, 24, 94),
+                  // Color.fromARGB(255, 48, 0, 126),
+                  // Color.fromARGB(255, 67, 0, 88),
                 ],
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                // Header
-                Header(
-                  city: cityData,
-                  state: stateData,
-                  updatedAt: updatedAtData,
-                ),
-                // Climate
-                Climate(
-                  temperature: currentTemp.toInt().toString(),
-                  street: streetData,
-                  temperatureMin: tempMinData,
-                  temperatureMax: tempMaxData,
-                ),
-                // Card Prevision
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 10,
-                  children: cards,
-                ),
-              ],
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // Header
+                  Header(
+                    city: cityData,
+                    state: stateData,
+                    updatedAt: updatedAtData,
+                  ),
+                  // Climate
+                  Climate(
+                    temperature: currentTemp.toInt().toString(),
+                    street: streetData,
+                    temperatureMin: tempMinData,
+                    temperatureMax: tempMaxData,
+                  ),
+                  // Card Prevision
+                  Column(
+                    spacing: 17,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 18, bottom: 5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Probabilidade de Chuva: $precipitation%',
+                              style: TextStyle(fontSize: 15),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            spacing: 10,
+                            children: cards,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           );
         },
